@@ -1,27 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta name="google-site-verification" content="M6m52WsVXBPjdkLIXG2EVXH_B1MpG-iYokd3EMdpNVM" />
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chores Roulette</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-  <header class="topbar">
-    <div class="brand">🎡 Chores Roulette</div>
-    <button id="settingsBtn" class="settings-btn">⚙️ Settings</button>
-  </header>
-
-  <main class="container">
-    <section class="roulette-section">
-      <h1>Who's Doing the Chores?</h1>
-      <p class="subtitle">Spin the wheel and let fate decide!</p>
-
-      <div class="wheel-wrapper">
-        <div class="pointer"></div>
-        <canvas id="wheel" width="500" height="500"></canvas>
+ight="500"></canvas>
       </div>
 
       <button id="spinBtn" class="spin-btn">🎯 SPIN!</button>
@@ -56,6 +33,23 @@
     </aside>
   </main>
 
+<!-- WINNER POPUP -->
+<div id="winnerModal" class="modal" aria-hidden="true">
+  <div
+    class="winner-modal-content"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="winnerTitle"
+  >
+    <h2 id="winnerTitle">Chore Selected!</h2>
+
+    <p id="winnerChore" class="winner-chore"></p>
+
+    <button id="winnerOkBtn" class="winner-ok-btn">
+      OK
+    </button>
+  </div>
+</div>
   <!-- SETTINGS POPUP -->
   <div id="settingsModal" class="modal" aria-hidden="true">
     <div class="modal-content">
